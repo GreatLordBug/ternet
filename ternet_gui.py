@@ -521,6 +521,7 @@ class BroadcastSystem:
                 channels=1,
                 dtype="int16",
                 blocksize=CHUNKS_PER_BUFFER,
+                latency="high",
             )
             self.stream.start()
             self.audio_enabled = True
@@ -573,7 +574,6 @@ class BroadcastSystem:
                 self.audio_enabled = False
                 self.stream = None
                 break
-            time.sleep(0.01)
 
     def trigger_interrupt(self, audio_array):
         with self.lock:
