@@ -1,0 +1,4 @@
+numpy>=2.0
+sounddevice>=0.5
+customtkinter>=5.2
+tomli>=2.0; python_version < "3.11"
